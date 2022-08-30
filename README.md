@@ -10,7 +10,7 @@ A README.md that describes the purpose of the repository. Although there is no g
 
 - The following is the picture of my website that scraped data.
 
-![website_image](/website_ss.png)
+![website_image](/website_sss.png)
 
 
 ### Result
