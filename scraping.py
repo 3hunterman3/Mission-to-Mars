@@ -108,15 +108,14 @@ def hemispheres(browser):
 
     # 3. Write code to retrieve the image urls and titles for each hemisphere.
     for x in range(4):
-        # hemispheres = {}
+        hemispheres = {}
         browser.find_by_css('a.product-item h3')[x].click()
-        # content = browser.find_by_text('Sample').first
-        # img_url = content['href']
-        # title = browser.find_by_css("h2.title").text
-        # hemispheres["img_url"] = img_url
-        # hemispheres["title"] = title
-        hemisphere_data = scrape_hemisphere(browser.html)
-        hemisphere_image_urls.append(hemisphere_data)
+        content = browser.find_by_text('Sample').first
+        img_url = content['href']
+        title = browser.find_by_css("h2.title").text
+        hemispheres["img_url"] = img_url
+        hemispheres["title"] = title
+        hemisphere_image_urls.append(hemispheres)
         browser.back()
     return hemisphere_image_urls
 
@@ -142,4 +141,5 @@ if __name__ == "__main__":
 
     # If running as script, print scraped data
     print(scrape_all())
+
 
